@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="バレー組み合わせ">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="theme-color" content="#1a0a2e">
+<title>🏐 バレー組み合わせ</title>
+<style>
+:root{--pink:#ff6eb4;--yellow:#ffe94a;--cyan:#4af0ff;--green:#5dff8f;--orange:#ff8c42;--purple:#c084fc;--bg:#1a0a2e;}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+body{font-family:'Hiragino Sans','Noto Sans JP',sans-serif;background:var(--bg);color:#fff;min-height:100vh;min-height:-webkit-fill-available;overflow-x:hidden;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);}
+.bg-wrap{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0;}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);animation:blob 8s ease-in-out infinite;}
+.b1{width:350px;height:350px;background:rgba(255,110,180,0.18);top:-10%;left:-10%;}
+.b2{width:300px;height:300px;background:rgba(74,240,255,0.15);bottom:0;right:-5%;animation-delay:-3s;}
+.b3{width:250px;height:250px;background:rgba(93,255,143,0.12);top:40%;left:30%;animation-delay:-5s;}
+@keyframes blob{0%,100%{transform:scale(1) translate(0,0);}50%{transform:scale(1.15) translate(20px,-20px);}}
+#app{position:relative;z-index:1;max-width:460px;margin:0 auto;padding:20px 14px 70px;display:flex;flex-direction:column;gap:14px;}
+.hdr{text-align:center;padding:8px 0 2px;}
+.hdr .ico{font-size:50px;display:block;animation:bounce 2s ease-in-out infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+.hdr h1{font-size:21px;font-weight:900;margin-top:4px;}
+.hdr h1 .y{color:var(--yellow);}.hdr h1 .p{color:var(--pink);}
+.hdr p{color:rgba(255,255,255,0.35);font-size:11px;margin-top:3px;}
+.card{background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.12);border-radius:20px;padding:16px;}
+.clbl{font-size:11px;font-weight:800;letter-spacing:0.1em;margin-bottom:10px;}
+.tabs{display:flex;gap:6px;}
+.tab{flex:1;padding:9px 4px;border-radius:13px;border:2px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.4);font-size:11px;font-weight:800;cursor:pointer;transition:all 0.18s;text-align:center;line-height:1.3;}
+.tab.on{background:var(--yellow);color:#2d1555;border-color:var(--yellow);box-shadow:0 0 14px rgba(255,233,74,0.5);transform:scale(1.03);}
+.cbtns{display:flex;gap:10px;}
+.cbtn{flex:1;padding:12px;border-radius:13px;border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.4);font-size:14px;font-weight:900;cursor:pointer;transition:all 0.18s;}
+.cbtn .sub{font-size:10px;font-weight:500;opacity:0.6;margin-top:2px;}
+.cbtn.on{background:linear-gradient(135deg,var(--cyan),var(--purple));color:#fff;border-color:transparent;box-shadow:0 0 18px rgba(74,240,255,0.4);transform:scale(1.04);}
+.ngrid{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;}
+.nbtn{padding:7px 0;border-radius:9px;border:none;background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.32);font-size:12px;font-weight:800;cursor:pointer;transition:all 0.13s;}
+.nbtn.ab{background:linear-gradient(135deg,#38bdf8,#818cf8);color:#fff;}
+.nbtn.ar{background:linear-gradient(135deg,var(--pink),var(--orange));color:#fff;}
+.name-list{display:flex;flex-direction:column;gap:6px;}
+.name-row{display:flex;align-items:center;gap:8px;}
+.nidx{font-size:13px;font-weight:900;width:22px;flex-shrink:0;text-align:center;}
+.nidx.m{color:#7dd3fc;}.nidx.f{color:var(--pink);}
+.ninp{flex:1;padding:9px 12px;border-radius:11px;border:1.5px solid rgba(255,255,255,0.13);background:rgba(255,255,255,0.08);color:#fff;font-size:14px;font-family:inherit;outline:none;transition:all 0.15s;}
+.ninp:focus{border-color:var(--cyan);background:rgba(74,240,255,0.1);}
+.ninp::placeholder{color:rgba(255,255,255,0.2);}
+.pair-list{display:flex;flex-direction:column;gap:8px;}
+.pair-row{display:flex;align-items:center;gap:8px;padding:10px 12px;background:rgba(255,255,255,0.05);border-radius:13px;border:1.5px solid rgba(255,255,255,0.1);}
+.pair-row.paired{background:rgba(255,233,74,0.08);border-color:rgba(255,233,74,0.3);}
+.psel{flex:1;padding:7px 8px;border-radius:10px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.07);color:#fff;font-size:13px;font-weight:700;font-family:inherit;outline:none;-webkit-appearance:none;appearance:none;}
+.psel option{background:#2d1555;color:#fff;}
+.padd-btn{padding:6px 12px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--yellow),var(--orange));color:#2d1555;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap;}
+.pclear-btn{padding:5px 10px;border-radius:8px;border:none;background:rgba(255,100,100,0.2);color:#ff9999;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.unit{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:800;margin:2px;}
+.unit.pair{background:rgba(255,233,74,0.2);color:var(--yellow);border:1.5px solid rgba(255,233,74,0.4);}
+.unit.solo-m{background:rgba(56,189,248,0.2);color:#7dd3fc;border:1.5px solid rgba(56,189,248,0.35);}
+.unit.solo-f{background:rgba(255,110,180,0.2);color:#ffb3d9;border:1.5px solid rgba(255,110,180,0.35);}
+.unit.dim{opacity:0.28;}
+.warn{background:rgba(255,140,66,0.12);border:1.5px solid rgba(255,140,66,0.4);border-radius:13px;padding:10px 14px;font-size:12px;color:var(--orange);}
+.info{background:rgba(74,240,255,0.08);border:1.5px solid rgba(74,240,255,0.25);border-radius:13px;padding:10px 14px;font-size:12px;color:var(--cyan);}
+.btn-go{width:100%;padding:16px;border-radius:17px;border:none;background:linear-gradient(135deg,var(--yellow),var(--orange));color:#2d1555;font-size:17px;font-weight:900;cursor:pointer;box-shadow:0 6px 22px rgba(255,140,66,0.4);transition:all 0.15s;}
+.btn-go:active{transform:scale(0.96);}
+.ghdr{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.07);border:1.5px solid rgba(255,255,255,0.12);border-radius:17px;padding:10px 13px;}
+.btn-bk{font-size:12px;color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.07);border:none;border-radius:10px;padding:6px 11px;cursor:pointer;font-weight:700;}
+.gnum{color:var(--yellow);font-size:21px;font-weight:900;text-align:center;text-shadow:0 0 14px rgba(255,233,74,0.5);}
+.gsub{color:rgba(255,255,255,0.3);font-size:10px;text-align:center;margin-top:1px;}
+.btn-st{font-size:12px;background:rgba(255,255,255,0.07);border:none;border-radius:10px;padding:6px 11px;cursor:pointer;color:rgba(255,255,255,0.38);font-weight:700;}
+.btn-st.on{background:rgba(255,233,74,0.2);color:var(--yellow);}
+.cc{border-radius:20px;padding:14px;position:relative;overflow:hidden;}
+.cc::before{content:'';position:absolute;inset:0;opacity:0.06;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%) 0/12px 12px;}
+.cc.bl{background:linear-gradient(135deg,#1e3a8a,#312e81);border:2px solid rgba(99,102,241,0.5);box-shadow:0 6px 24px rgba(99,102,241,0.3);}
+.cc.gr{background:linear-gradient(135deg,#064e3b,#065f46);border:2px solid rgba(16,185,129,0.5);box-shadow:0 6px 24px rgba(16,185,129,0.3);}
+.cttl{text-align:center;font-size:12px;font-weight:900;letter-spacing:0.1em;margin-bottom:10px;position:relative;}
+.cc.bl .cttl{color:#a5b4fc;}.cc.gr .cttl{color:#6ee7b7;}
+.trow{display:flex;gap:7px;align-items:center;}
+.tbox{flex:1;border-radius:13px;padding:10px;}
+.cc.bl .ta{background:rgba(99,102,241,0.3);}.cc.bl .tb{background:rgba(139,92,246,0.3);}
+.cc.gr .ta{background:rgba(16,185,129,0.3);}.cc.gr .tb{background:rgba(20,184,166,0.3);}
+.tlbl{text-align:center;font-size:10px;font-weight:800;color:rgba(255,255,255,0.5);margin-bottom:6px;}
+.tplayers{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.pcell{background:rgba(255,255,255,0.15);border-radius:9px;padding:6px 3px;text-align:center;font-size:12px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid rgba(255,255,255,0.1);}
+.pcell.paired{background:rgba(255,233,74,0.25);border-color:rgba(255,233,74,0.4);color:var(--yellow);}
+.vslbl{font-size:13px;font-weight:900;color:rgba(255,255,255,0.5);flex-shrink:0;text-align:center;}
+.rcard{padding:10px 14px;}
+.rttl{font-size:10px;font-weight:800;color:rgba(255,255,255,0.4);margin-bottom:6px;}
+.chips{display:flex;flex-wrap:wrap;gap:4px;}
+.sbars{display:flex;flex-direction:column;gap:5px;}
+.srow{display:flex;align-items:center;gap:7px;}
+.slbl{font-size:11px;font-weight:800;width:80px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.slbl.m{color:#7dd3fc;}.slbl.f{color:#ffb3d9;}.slbl.p{color:var(--yellow);}
+.strk{flex:1;background:rgba(255,255,255,0.07);border-radius:999px;height:6px;overflow:hidden;}
+.sfil{height:6px;border-radius:999px;transition:width 0.4s;}
+.sfil.m{background:linear-gradient(to right,#38bdf8,#818cf8);}
+.sfil.f{background:linear-gradient(to right,var(--pink),var(--orange));}
+.sfil.p{background:linear-gradient(to right,var(--yellow),var(--orange));}
+.scnt{font-size:11px;color:rgba(255,255,255,0.3);width:16px;text-align:right;}
+.hlst{display:flex;flex-direction:column;gap:3px;max-height:110px;overflow-y:auto;}
+.hitm{font-size:11px;color:rgba(255,255,255,0.26);background:rgba(255,255,255,0.04);border-radius:9px;padding:5px 10px;display:flex;flex-wrap:wrap;gap:3px;align-items:center;}
+.hgn{color:rgba(255,255,255,0.48);font-weight:800;flex-shrink:0;}
+.ha{color:rgba(165,180,252,0.65);}.hvs{color:rgba(255,255,255,0.18);}.hb{color:rgba(110,231,183,0.65);}
+.hr{color:rgba(255,255,255,0.16);margin-left:auto;}
+.btn-nx{width:100%;padding:16px;border-radius:17px;border:none;background:linear-gradient(135deg,var(--green),var(--cyan));color:#0a2a12;font-size:17px;font-weight:900;cursor:pointer;box-shadow:0 6px 22px rgba(93,255,143,0.4);transition:all 0.15s;}
+.btn-nx:active{transform:scale(0.96);}
+</style>
+</head>
+<body>
+<div class="bg-wrap"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div id="app"></div>
+<script>
+// ===== ユーティリティ =====
+function shuffle(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ===== ユニット =====
+// ペア: {type:'pair', members:[男名,女名], id, label}
+// 個人: {type:'solo', members:[名], id, label, gender:'m'/'f'}
+function buildUnits(mNames, fNames, pairs) {
+  var usedM = {}, usedF = {}, units = [];
+  pairs.forEach(function(p, i) {
+    units.push({type:'pair', members:[mNames[p.mIdx], fNames[p.fIdx]], id:'p'+i, label:mNames[p.mIdx]+'&'+fNames[p.fIdx]});
+    usedM[p.mIdx] = true; usedF[p.fIdx] = true;
+  });
+  mNames.forEach(function(m, i) { if (!usedM[i]) units.push({type:'solo', members:[m], id:'sm'+i, label:m, gender:'m'}); });
+  fNames.forEach(function(f, i) { if (!usedF[i]) units.push({type:'solo', members:[f], id:'sf'+i, label:f, gender:'f'}); });
+  return units;
+}
+
+// ===== ゲーム生成 =====
+function generateGame(mNames, fNames, pairs, courts, playCount, playedWith) {
+  var units = buildUnits(mNames, fNames, pairs);
+
+  // ユニットの出場回数（メンバーの最小値）
+  function upc(u) { return Math.min.apply(null, u.members.map(function(m){ return playCount[m]||0; })); }
+  function srt(arr) { return shuffle(arr).sort(function(a,b){ return upc(a)-upc(b); }); }
+
+  var pairUnits   = srt(units.filter(function(u){ return u.type==='pair'; }));
+  var maleUnits   = srt(units.filter(function(u){ return u.type==='solo' && u.gender==='m'; }));
+  var femaleUnits = srt(units.filter(function(u){ return u.type==='solo' && u.gender==='f'; }));
+
+  // 1コートにつき男4人・女4人が必要 (A男2女2 + B男2女2)
+  // ペアは男1人+女1人を同時に消費
+  var needM = courts * 4, needF = courts * 4;
+  var playing = [], resting = [], mc = 0, fc = 0;
+
+  pairUnits.forEach(function(u) {
+    if (mc < needM && fc < needF) { playing.push(u); mc++; fc++; }
+    else resting.push(u);
+  });
+  maleUnits.forEach(function(u) {
+    if (mc < needM) { playing.push(u); mc++; }
+    else resting.push(u);
+  });
+  femaleUnits.forEach(function(u) {
+    if (fc < needF) { playing.push(u); fc++; }
+    else resting.push(u);
+  });
+
+  // 不足なら1コートにフォールバック
+  if (mc < 4 || fc < 4) {
+    playing = []; resting = []; mc = 0; fc = 0;
+    pairUnits.forEach(function(u) { if(mc<4&&fc<4){playing.push(u);mc++;fc++;}else resting.push(u); });
+    maleUnits.forEach(function(u) { if(mc<4){playing.push(u);mc++;}else resting.push(u); });
+    femaleUnits.forEach(function(u) { if(fc<4){playing.push(u);fc++;}else resting.push(u); });
+  }
+
+  // チームスコア
+  function teamScore(members) {
+    var s=0,mx=0;
+    for(var a=0;a<members.length;a++)for(var b=a+1;b<members.length;b++){
+      var c=(playedWith[members[a]]&&playedWith[members[a]][members[b]])||0;s+=c;if(c>mx)mx=c;
+    }
+    return s*10+mx;
+  }
+
+  // ペアのメンバーセット
+  var pairSet={};
+  units.forEach(function(u){if(u.type==='pair')u.members.forEach(function(m){pairSet[m]=true;});});
+
+  // 1コート分のチーム分け（ペアを崩さない）
+  function splitOneCourt(courtUnits) {
+    var cP=courtUnits.filter(function(u){return u.type==='pair';});
+    var cM=courtUnits.filter(function(u){return u.type==='solo'&&u.gender==='m';});
+    var cF=courtUnits.filter(function(u){return u.type==='solo'&&u.gender==='f';});
+    var np2=cP.length,best=null,bestSc=Infinity;
+    for(var pm=0;pm<(1<<np2);pm++){
+      var pA2=[],pB2=[];
+      for(var pi2=0;pi2<np2;pi2++){if(pm&(1<<pi2))pA2.push(cP[pi2]);else pB2.push(cP[pi2]);}
+      for(var st=0;st<10;st++){
+        var sm2=shuffle(cM),sf2=shuffle(cF);
+        var mh=Math.floor(sm2.length/2),fh=Math.floor(sf2.length/2);
+        var tA=[],tB=[];
+        pA2.forEach(function(u){u.members.forEach(function(m){tA.push(m);});});
+        pB2.forEach(function(u){u.members.forEach(function(m){tB.push(m);});});
+        sm2.slice(0,mh).forEach(function(u){u.members.forEach(function(m){tA.push(m);});});
+        sm2.slice(mh).forEach(function(u){u.members.forEach(function(m){tB.push(m);});});
+        sf2.slice(0,fh).forEach(function(u){u.members.forEach(function(m){tA.push(m);});});
+        sf2.slice(fh).forEach(function(u){u.members.forEach(function(m){tB.push(m);});});
+        if(tA.length!==4||tB.length!==4)continue;
+        var am=tA.filter(function(m){return mNames.indexOf(m)>=0;}).length;
+        if(am!==2)continue;
+        var sc=teamScore(tA)+teamScore(tB);
+        if(sc<bestSc){bestSc=sc;best={A:tA,B:tB};}
+      }
+    }
+    return best;
+  }
+
+  // ユニットの男数・女数
+  function countM(arr){var c=0;arr.forEach(function(u){if(u.type==='pair')c++;else if(u.gender==='m')c++;});return c;}
+  function countF(arr){var c=0;arr.forEach(function(u){if(u.type==='pair')c++;else if(u.gender==='f')c++;});return c;}
+
+  var restMembers=[];
+  resting.forEach(function(u){u.members.forEach(function(m){restMembers.push(m);});});
+
+  var courtResults=[];
+
+  if(courts===2&&mc>=4&&fc>=4){
+    // 2コート: playingを半分ずつに分けてコート1/2を作る
+    var pP=playing.filter(function(u){return u.type==='pair';});
+    var pM=playing.filter(function(u){return u.type==='solo'&&u.gender==='m';});
+    var pF=playing.filter(function(u){return u.type==='solo'&&u.gender==='f';});
+    var bestSc2=Infinity,bestC=null;
+    for(var t2=0;t2<50;t2++){
+      var sp=shuffle(pP),sm=shuffle(pM),sf=shuffle(pF);
+      var ph=Math.floor(sp.length/2),mh2=Math.floor(sm.length/2),fh2=Math.floor(sf.length/2);
+      var c1U=sp.slice(0,ph).concat(sm.slice(0,mh2)).concat(sf.slice(0,fh2));
+      var c2U=sp.slice(ph).concat(sm.slice(mh2)).concat(sf.slice(fh2));
+      if(countM(c1U)!==4||countF(c1U)!==4)continue;
+      if(countM(c2U)!==4||countF(c2U)!==4)continue;
+      var r1=splitOneCourt(c1U),r2=splitOneCourt(c2U);
+      if(!r1||!r2)continue;
+      var tsc=teamScore(r1.A)+teamScore(r1.B)+teamScore(r2.A)+teamScore(r2.B);
+      if(tsc<bestSc2){bestSc2=tsc;bestC=[r1,r2];}
+    }
+    if(bestC){
+      courtResults=bestC;
+    }else{
+      // フォールバック: 無理やり前半/後半に分ける
+      var allP=[];playing.forEach(function(u){u.members.forEach(function(m){allP.push(m);});});
+      allP=shuffle(allP);
+      courtResults=[{A:allP.slice(0,4),B:allP.slice(4,8)},{A:allP.slice(8,12),B:allP.slice(12,16)}];
+    }
+  }else{
+    // 1コート
+    var r=splitOneCourt(playing);
+    if(r){
+      courtResults=[r];
+    }else{
+      var allM=[];playing.forEach(function(u){u.members.forEach(function(m){allM.push(m);});});
+      allM=shuffle(allM);
+      courtResults=[{A:allM.slice(0,4),B:allM.slice(4,8)}];
+    }
+  }
+
+  return{courts:courtResults,resting:restMembers,pairSet:pairSet,units:units};
+}
+
+function updPW(game, pw) {
+  var p = JSON.parse(JSON.stringify(pw));
+  game.courts.forEach(function(ct) {
+    [ct.A, ct.B].forEach(function(team) {
+      for (var i=0; i<team.length; i++) for (var j=i+1; j<team.length; j++) {
+        var a=team[i], b=team[j];
+        if(!p[a])p[a]={}; if(!p[b])p[b]={};
+        p[a][b]=(p[a][b]||0)+1; p[b][a]=(p[b][a]||0)+1;
+      }
+    });
+  });
+  return p;
+}
+function updPC(game, pc) {
+  var p = Object.assign({}, pc);
+  game.courts.forEach(function(ct) {
+    ct.A.concat(ct.B).forEach(function(n){ p[n]=(p[n]||0)+1; });
+  });
+  return p;
+}
+
+// ===== localStorage =====
+var SAVE_KEY = 'vb_save_v2';
+function saveState() {
+  try {
+    localStorage.setItem(SAVE_KEY, JSON.stringify({
+      men:S.men, women:S.women, courts:S.courts,
+      mNames:S.mNames, fNames:S.fNames, pairs:S.pairs,
+      gi:S.gi, pw:S.pw, pc:S.pc,
+      hist:S.hist.slice(-20),
+      step:S.step, setupStep:S.setupStep
+    }));
+  } catch(e){}
+}
+function loadSave() {
+  try { var r=localStorage.getItem(SAVE_KEY); return r?JSON.parse(r):null; } catch(e){ return null; }
+}
+function clearSave() { try{ localStorage.removeItem(SAVE_KEY); }catch(e){} }
+
+// ===== 状態 =====
+var S = {
+  step:'setup', setupStep:'count',
+  men:6, women:6, courts:1,
+  mNames:[], fNames:[], pairs:[],
+  gi:0, game:null, pw:{}, pc:{}, hist:[], stats:false,
+  showResume:false, savedInfo:null
+};
+
+function getMNames() {
+  var a=[];
+  for(var i=0;i<S.men;i++){var el=document.getElementById('mn'+i);a.push(el?el.value.trim()||('男'+(i+1)):S.mNames[i]||('男'+(i+1)));}
+  return a;
+}
+function getFNames() {
+  var a=[];
+  for(var i=0;i<S.women;i++){var el=document.getElementById('fn'+i);a.push(el?el.value.trim()||('女'+(i+1)):S.fNames[i]||('女'+(i+1)));}
+  return a;
+}
+
+function unitTag(u, dim) {
+  var d=dim?' dim':'';
+  if(u.type==='pair') return '<span class="unit pair'+d+'">'+esc(u.members[0])+' 💑 '+esc(u.members[1])+'</span>';
+  return '<span class="unit '+(u.gender==='m'?'solo-m':'solo-f')+d+'">'+esc(u.members[0])+'</span>';
+}
+
+// ===== render =====
+function render() {
+  var s = S;
+  var mN = s.mNames.length===s.men ? s.mNames : (function(){var a=[];for(var i=0;i<s.men;i++)a.push('男'+(i+1));return a;})();
+  var fN = s.fNames.length===s.women ? s.fNames : (function(){var a=[];for(var i=0;i<s.women;i++)a.push('女'+(i+1));return a;})();
+  var gn = s.gi + 1;
+
+  var h = '<div class="hdr"><span class="ico">🏐</span><h1><span class="y">4人制</span>バレー<span class="p">組み合わせ</span></h1><p>男2女2 × ペア対応 ✨</p></div>';
+
+  // 続きからバナー
+  if (s.showResume && s.savedInfo) {
+    var si = s.savedInfo;
+    h += '<div style="background:linear-gradient(135deg,rgba(255,233,74,0.15),rgba(255,140,66,0.15));border:2px solid rgba(255,233,74,0.4);border-radius:18px;padding:16px;">'
+      +'<div style="font-size:12px;font-weight:800;color:var(--yellow);margin-bottom:8px">💾 前回の続きがあります</div>'
+      +'<div style="font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:12px">Game '+(si.gi+1)+' まで / 男'+si.men+'人・女'+si.women+'人</div>'
+      +'<div style="display:flex;gap:8px;">'
+      +'<button onclick="resumeGame()" style="flex:1;padding:11px;border-radius:13px;border:none;background:linear-gradient(135deg,var(--yellow),var(--orange));color:#2d1555;font-size:14px;font-weight:900;cursor:pointer;">▶ 続きから</button>'
+      +'<button onclick="S.showResume=false;render();" style="flex:1;padding:11px;border-radius:13px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.5);font-size:14px;font-weight:800;cursor:pointer;">🆕 最初から</button>'
+      +'</div></div>';
+  }
+
+  // ===== 設定画面 =====
+  if (s.step === 'setup') {
+    h += '<div class="tabs">'
+      +'<button class="tab'+(s.setupStep==='count'?' on':'')+'" onclick="goCount()">①人数</button>'
+      +'<button class="tab'+(s.setupStep==='names'?' on':'')+'" onclick="goNames()">②名前</button>'
+      +'<button class="tab'+(s.setupStep==='pairs'?' on':'')+'" onclick="goPairs()">③ペア設定</button>'
+      +'</div>';
+
+    // ① 人数・コート
+    if (s.setupStep === 'count') {
+      h += '<div class="card"><div class="clbl" style="color:var(--cyan)">⛳ コート数</div><div class="cbtns">'
+        +'<button class="cbtn'+(s.courts===1?' on':'')+'" onclick="S.courts=1;render()">1面<div class="sub">最大8人</div></button>'
+        +'<button class="cbtn'+(s.courts===2?' on':'')+'" onclick="S.courts=2;render()">2面<div class="sub">最大16人</div></button>'
+        +'</div></div>';
+      h += '<div class="card"><div class="clbl" style="color:#7dd3fc">👨 男性：<span style="color:#fff;font-size:15px;font-weight:900">'+s.men+'人</span></div><div class="ngrid">';
+      for(var n=4;n<=12;n++) h+='<button class="nbtn'+(s.men===n?' ab':'')+'" onclick="S.men='+n+';render()">'+n+'</button>';
+      h += '</div></div>';
+      h += '<div class="card"><div class="clbl" style="color:var(--pink)">👩 女性：<span style="color:#fff;font-size:15px;font-weight:900">'+s.women+'人</span></div><div class="ngrid">';
+      for(var n=4;n<=12;n++) h+='<button class="nbtn'+(s.women===n?' ar':'')+'" onclick="S.women='+n+';render()">'+n+'</button>';
+      h += '</div></div>';
+      if(s.courts===2&&(s.men<8||s.women<8)) h+='<div class="warn">⚠️ 2コートには男女各8人以上必要です。</div>';
+      h += '<button class="btn-go" onclick="goNames()">次へ：名前を入力 ✏️</button>';
+    }
+
+    // ② 名前入力
+    if (s.setupStep === 'names') {
+      h += '<div class="card"><div class="clbl" style="color:#7dd3fc">👨 男性の名前（'+s.men+'人）</div><div class="name-list">';
+      for(var i=0;i<s.men;i++) h+='<div class="name-row"><span class="nidx m">'+(i+1)+'</span><input class="ninp" id="mn'+i+'" type="text" value="'+esc(s.mNames[i]||('男'+(i+1)))+'" placeholder="男'+(i+1)+'" maxlength="8"></div>';
+      h += '</div></div>';
+      h += '<div class="card"><div class="clbl" style="color:var(--pink)">👩 女性の名前（'+s.women+'人）</div><div class="name-list">';
+      for(var i=0;i<s.women;i++) h+='<div class="name-row"><span class="nidx f">'+(i+1)+'</span><input class="ninp" id="fn'+i+'" type="text" value="'+esc(s.fNames[i]||('女'+(i+1)))+'" placeholder="女'+(i+1)+'" maxlength="8"></div>';
+      h += '</div></div>';
+      h += '<button class="btn-go" onclick="goPairs()">次へ：ペア設定 💑</button>';
+    }
+
+    // ③ ペア設定
+    if (s.setupStep === 'pairs') {
+      var pairedM={}, pairedF={};
+      s.pairs.forEach(function(p){pairedM[p.mIdx]=true;pairedF[p.fIdx]=true;});
+      var freeM=mN.filter(function(_,i){return !pairedM[i];});
+      var freeF=fN.filter(function(_,i){return !pairedF[i];});
+
+      h += '<div class="card"><div class="clbl" style="color:var(--yellow)">💑 ペア設定（任意・何組でもOK）</div>'
+        +'<div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:12px">男女1組ずつ登録。ペアは試合中崩れません。</div>'
+        +'<div class="pair-list">';
+      s.pairs.forEach(function(p,i){
+        h+='<div class="pair-row paired"><span style="color:var(--yellow);font-size:13px;font-weight:900">💑</span>'
+          +'<span style="flex:1;font-size:13px;font-weight:800;color:var(--yellow)">'+esc(mN[p.mIdx])+' × '+esc(fN[p.fIdx])+'</span>'
+          +'<button class="pclear-btn" onclick="removePair('+i+')">✕ 解除</button></div>';
+      });
+      if(freeM.length>0&&freeF.length>0){
+        h+='<div class="pair-row"><span style="font-size:11px;color:rgba(255,255,255,0.4);flex-shrink:0">追加</span>'
+          +'<select class="psel" id="npm">';
+        freeM.forEach(function(nm){h+='<option value="'+mN.indexOf(nm)+'">'+esc(nm)+'</option>';});
+        h+='</select><span style="color:var(--yellow);font-size:16px;font-weight:900;flex-shrink:0">💑</span>'
+          +'<select class="psel" id="npf">';
+        freeF.forEach(function(nf){h+='<option value="'+fN.indexOf(nf)+'">'+esc(nf)+'</option>';});
+        h+='</select><button class="padd-btn" onclick="addPair()">追加</button></div>';
+      }
+      h+='</div></div>';
+
+      // ユニット一覧
+      var previewUnits = buildUnits(mN, fN, s.pairs);
+      h+='<div class="card"><div class="clbl" style="color:var(--cyan)">📋 現在のユニット</div><div class="chips">';
+      previewUnits.forEach(function(u){h+=unitTag(u,false);});
+      h+='</div></div>';
+      h+='<div class="info" style="font-size:11px">💡 ペアは毎試合一緒に出場・休憩します。出場回数はユニット単位で均等になります。</div>';
+      h+='<button class="btn-go" onclick="startGame()">スタート 🏐🎉</button>';
+    }
+  }
+
+  // ===== ゲーム画面 =====
+  if (s.step==='game' && s.game) {
+    var g = s.game;
+    var pairSet = g.pairSet || {};
+    var gameUnits = g.units || buildUnits(mN, fN, s.pairs);
+    var mx = 1;
+    mN.concat(fN).forEach(function(p){var c=s.pc[p]||0;if(c>mx)mx=c;});
+
+    h+='<div class="ghdr">'
+      +'<button class="btn-bk" onclick="resetApp()">← 設定</button>'
+      +'<div><div class="gnum">✨ Game '+gn+' ✨</div><div class="gsub">男'+s.men+'人 · 女'+s.women+'人 · '+s.courts+'コート</div></div>'
+      +'<button class="btn-st'+(s.stats?' on':'')+'" onclick="S.stats=!S.stats;render()">📊</button>'
+      +'</div>';
+
+    if(s.pairs.length>0){
+      h+='<div style="display:flex;flex-wrap:wrap;gap:5px;padding:0 2px">';
+      gameUnits.forEach(function(u){if(u.type==='pair')h+=unitTag(u,false);});
+      h+='</div>';
+    }
+
+    // コート表示（複数コート対応）
+    var courtColors = ['bl','gr'];
+    g.courts.forEach(function(ct, ci) {
+      var cl = courtColors[ci] || 'bl';
+      var lbl = g.courts.length > 1 ? '🏟 コート' + (ci+1) : '🏟 コート';
+      var aHTML = ct.A.map(function(p){return '<div class="pcell'+(pairSet[p]?' paired':'')+'">'+esc(p)+'</div>';}).join('');
+      var bHTML = ct.B.map(function(p){return '<div class="pcell'+(pairSet[p]?' paired':'')+'">'+esc(p)+'</div>';}).join('');
+      h+='<div class="cc '+cl+'"><div class="cttl">'+lbl+'</div><div class="trow">'
+        +'<div class="tbox ta"><div class="tlbl">🔵 Aチーム</div><div class="tplayers">'+aHTML+'</div></div>'
+        +'<div class="vslbl">⚡<br>VS<br>⚡</div>'
+        +'<div class="tbox tb"><div class="tlbl">🔴 Bチーム</div><div class="tplayers">'+bHTML+'</div></div>'
+        +'</div></div>';
+    });
+
+    if(g.resting.length>0){
+      h+='<div class="card rcard"><div class="rttl">💤 今回の休み</div><div class="chips">';
+      g.resting.forEach(function(p){
+        var isMale=mN.indexOf(p)>=0;
+        h+='<span class="unit '+(pairSet[p]?'pair':(isMale?'solo-m':'solo-f'))+'">'+esc(p)+'</span>';
+      });
+      h+='</div></div>';
+    }
+
+    if(s.stats){
+      h+='<div class="card"><div class="clbl" style="color:var(--yellow)">📊 累計出場回数（'+gn+'ゲーム終了時点）</div><div class="sbars">';
+      gameUnits.forEach(function(u){
+        var cnt=Math.min.apply(null,u.members.map(function(m){return s.pc[m]||0;}));
+        var pct=mx>0?cnt/mx*100:0;
+        var cls=u.type==='pair'?'p':(u.gender==='m'?'m':'f');
+        h+='<div class="srow"><span class="slbl '+cls+'">'+esc(u.label)+'</span>'
+          +'<div class="strk"><div class="sfil '+cls+'" style="width:'+pct+'%"></div></div>'
+          +'<span class="scnt">'+cnt+'</span></div>';
+      });
+      h+='</div></div>';
+    }
+
+    if(s.hist.length>1){
+      var items=s.hist.slice().reverse().slice(1,6).map(function(hh,idx){
+        var gnum=s.hist.length-1-idx;
+        var cs=hh.courts.map(function(ct,ci){var pf=hh.courts.length>1?'C'+(ci+1)+': ':'';
+          return '<span style="color:rgba(255,255,255,0.3);">'+pf+'</span><span class="ha">'+ct.A.map(esc).join(' ')+'</span><span class="hvs"> vs </span><span class="hb">'+ct.B.map(esc).join(' ')+'</span>';
+        }).join(' ');
+        var rs=hh.resting.length>0?'<span class="hr">休:'+hh.resting.map(esc).join(',')+'</span>':'';
+        return '<div class="hitm"><span class="hgn">Game'+gnum+'</span>'+cs+rs+'</div>';
+      }).join('');
+      h+='<div class="card"><div class="clbl" style="color:rgba(255,255,255,0.4)">📋 履歴</div><div class="hlst">'+items+'</div></div>';
+    }
+
+    h+='<button class="btn-nx" onclick="nextGame()">次のゲーム → 🏐</button>';
+  }
+
+  document.getElementById('app').innerHTML = h;
+}
+
+// ===== ナビゲーション =====
+function goCount(){S.mNames=getMNames();S.fNames=getFNames();S.setupStep='count';render();}
+function goNames(){
+  S.mNames=(function(){var a=[];for(var i=0;i<S.men;i++)a.push(S.mNames[i]||('男'+(i+1)));return a;})();
+  S.fNames=(function(){var a=[];for(var i=0;i<S.women;i++)a.push(S.fNames[i]||('女'+(i+1)));return a;})();
+  S.setupStep='names';render();
+}
+function goPairs(){
+  S.mNames=getMNames();S.fNames=getFNames();
+  S.mNames=S.mNames.map(function(n,i){return n||('男'+(i+1));});
+  S.fNames=S.fNames.map(function(n,i){return n||('女'+(i+1));});
+  S.pairs=S.pairs.filter(function(p){return p.mIdx<S.men&&p.fIdx<S.women;});
+  S.setupStep='pairs';render();
+}
+function addPair(){
+  var mEl=document.getElementById('npm'),fEl=document.getElementById('npf');
+  if(!mEl||!fEl)return;
+  var mi=parseInt(mEl.value),fi=parseInt(fEl.value);
+  if(S.pairs.some(function(p){return p.mIdx===mi||p.fIdx===fi;}))return;
+  S.pairs.push({mIdx:mi,fIdx:fi});render();
+}
+function removePair(i){S.pairs.splice(i,1);render();}
+
+function startGame(){
+  var g=generateGame(S.mNames,S.fNames,S.pairs,S.courts,{},{});
+  S.game=g;S.pw={};S.pc=updPC(g,{});S.hist=[g];S.gi=0;S.stats=false;S.step='game';S.showResume=false;
+  saveState();render();window.scrollTo(0,0);
+}
+function nextGame(){
+  var npw=updPW(S.game,S.pw);
+  var npc=updPC(S.game,S.pc);
+  var g=generateGame(S.mNames,S.fNames,S.pairs,S.courts,npc,npw);
+  S.pw=npw;S.pc=npc;S.game=g;S.hist.push(g);S.gi++;
+  saveState();render();window.scrollTo(0,0);
+}
+function resetApp(){
+  S.step='setup';S.setupStep='count';
+  S.hist=[];S.game=null;S.pw={};S.pc={};S.gi=0;S.stats=false;S.showResume=false;
+  clearSave();render();window.scrollTo(0,0);
+}
+function resumeGame(){
+  var saved=loadSave();if(!saved)return;
+  S.men=saved.men||6;S.women=saved.women||6;S.courts=saved.courts||1;
+  S.mNames=saved.mNames||[];S.fNames=saved.fNames||[];S.pairs=saved.pairs||[];
+  S.gi=saved.gi||0;S.pw=saved.pw||{};S.pc=saved.pc||{};
+  S.hist=saved.hist||[];
+  S.step=saved.step||'setup';S.setupStep=saved.setupStep||'count';
+  S.game=S.hist.length>0?S.hist[S.hist.length-1]:null;
+  S.showResume=false;S.stats=false;
+  render();window.scrollTo(0,0);
+}
+
+// 起動時チェック
+(function(){
+  var saved=loadSave();
+  if(saved&&saved.gi>0){
+    S.showResume=true;
+    S.savedInfo={gi:saved.gi,men:saved.men,women:saved.women};
+  }
+  render();
+})();
+</script>
+</body>
+</html>
